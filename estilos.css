@@ -1,0 +1,419 @@
+/* ---------------------------------------------------
+   ESTILOS GENERALES
+--------------------------------------------------- */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 80px 0 120px;
+    scroll-margin-top: 120px; /* Para el header fijo */
+}
+
+.bg-light {
+    background: #F4F4F4;
+}
+
+/* ---------------------------------------------------
+   HEADER
+--------------------------------------------------- */
+.header {
+    background: #fff;
+    border-bottom: 3px solid #E6007E;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+}
+
+.logo {
+    width: 40vw;
+    max-width: 200px;
+    height: auto;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #E6007E;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff69b4;
+}
+
+.btn-header {
+    padding: 8px 18px;
+    background: #E6007E;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-header:hover {
+    background: #ff69b4;
+}
+
+/* ---------------------------------------------------
+   HERO DEL ENCUENTRO
+--------------------------------------------------- */
+.encuentro-header {
+    background: transparent;
+    padding: 120px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.contenedor-texto {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.encuentro-header h1 {
+    font-size: 3rem;
+    color: #4b0082;
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+}
+
+.encuentro-header h2 {
+    font-size: 1.3rem;
+    color: #E6007E;
+}
+
+.linea-decorativa {
+    width: 60px;
+    height: 4px;
+    background: #ff66b2;
+    margin: 15px auto 0;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #ff66b2;
+}
+
+/* ---------------------------------------------------
+   GALERÍA (IMAGEN + VIDEO)
+--------------------------------------------------- */
+.galeria-vertical {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.galeria-columnas-video {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imagen-item img {
+    width: 100%;
+    max-width: 350px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.descripcion {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* ---------------------------------------------------
+   TARJETAS (CATEGORÍAS)
+--------------------------------------------------- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    border-left: 6px solid #E6007E;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(230,0,126,0.3);
+}
+
+.card h3 {
+    color: #8B008B;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* ---------------------------------------------------
+   SECCIÓN “SOMOS”
+--------------------------------------------------- */
+#somos {
+    background: linear-gradient(to bottom right, #fff, #ffe6f5);
+    padding: 80px 20px;
+}
+
+#somos .section-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255,255,255,0.85);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Grid de la sección Encuentros */
+.encuentros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* Ajuste visual de las tarjetas */
+.encuentros-grid .card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Ajuste uniforme de las imágenes */
+.encuentros-grid img {
+    width: 100%;
+    height: 350px;      /* altura igual para todas */
+    object-fit: cover;  /* recorta para que no se deformen */
+    border-radius: 10px;
+}
+
+
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+.footer {
+    background: linear-gradient(135deg, #1a1a1a, #2a002a);
+    color: #f7e9ff;
+    padding: 60px 20px;
+    border-top: 4px solid #E6007E;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-block h3 {
+    color: #E6007E;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(230, 0, 126, 0.4);
+}
+
+.footer-block p, 
+.footer-block a {
+    color: #fce2ff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-block a:hover {
+    color: #fff;
+}
+
+.social-icons i {
+    font-size: 28px;
+    margin-right: 12px;
+    color: #f7e9ff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #E6007E;
+    transform: scale(1.2);
+}
+
+/* Línea inferior */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #555;
+    padding-top: 15px;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: slide 18s infinite;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animación del slider */
+@keyframes slide {
+    0%   { transform: translateX(0%); }
+    16.66%  { transform: translateX(-100%); }
+    33.33%  { transform: translateX(-200%); }
+    50%  { transform: translateX(-300%); }
+    66.66%  { transform: translateX(-400%); }
+    83.33%  { transform: translateX(-500%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Texto encima */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+/* BOTÓN WHATSAPP FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 15px rgba(37,211,102,0.7);
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .encuentro-header h1 {
+        font-size: 2rem;
+    }
+
+    .encuentro-header {
+        padding: 100px 20px;
+    }
+
+    .galeria-columnas-video {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-item iframe {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .encuentros-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .encuentros-grid {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .video-item iframe,
+    .imagen-item img {
+        max-width: 100%;
+        height: 260px; /* igual altura para ambos */
+        object-fit: cover; /* recorta la imagen/video para no deformar */
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+}
+
+
