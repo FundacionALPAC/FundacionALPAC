@@ -128,21 +128,40 @@ nav a:hover {
 }
 
 /* ---------------- Menú Hamburguesa ---------------- */
+/* Ocultar el menú en móvil */
+.nav-menu {
+    display: flex; /* por defecto visible en escritorio */
+    gap: 20px;
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* oculto por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* ajustar según altura del header */
+        right: 20px;
+        background-color: #fff; /* o el color de tu header */
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Cuando esté activo (abierto) */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Mostrar el ícono hamburguesa */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* En escritorio ocultar el ícono */
 .hamburger {
     display: none;
-    font-size: 30px;
-    color: #E6007E;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.hamburger.active i {
-    transform: rotate(90deg);
-}
-
-/* Menú móvil oculto */
-.nav-active {
-    display: block !important;
 }
 
 /* ---------------------------------------------------
