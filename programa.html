@@ -18,10 +18,14 @@
 <!-- HEADER -->
 <header class="header">
     <div class="container nav-container">
-        <div class="nav-left">
-            <img src="logo.jpg" class="logo" alt="Logo Fundación ALPAC">
+        <img src="logo.jpg" class="logo" alt="Logo Fundación ALPAC">
+        
+        <!-- Botón Hamburguesa -->
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
         </div>
 
+        <!-- Menú principal -->
         <nav class="nav-menu">
             <a href="index.html">Inicio</a>
             <a href="#Categorias">Categorías</a>
@@ -186,7 +190,18 @@
     </a>
 </footer>
 
+<!-- SCRIPT MENÚ HAMBURGUESA -->
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("nav-active");
+        hamburger.classList.toggle("active");
+    });
+</script>
 </body>
 
 </html>
+
 
