@@ -485,3 +485,41 @@ nav a:hover {
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 }
+
+/* === MODAL === */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+/* Imagen dentro del modal */
+.modal-content {
+    margin: 80px auto 0;
+    display: block;
+    width: 70%;
+    max-width: 600px;
+}
+
+/* Botón cerrar */
+.btn-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-cerrar:hover {
+    background: darkred;
+}
