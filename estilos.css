@@ -503,7 +503,7 @@ nav a:hover {
     margin: 80px auto 0;
     display: block;
     width: 70%;
-    max-width: 600px;
+    max-width: 500px;
 }
 
 /* Botón cerrar */
@@ -523,3 +523,4 @@ nav a:hover {
 .btn-cerrar:hover {
     background: darkred;
 }
+
