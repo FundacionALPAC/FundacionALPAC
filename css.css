@@ -331,36 +331,38 @@ nav a {
     font-size: 16px;
 }
 
-.slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    animation: slide 18s infinite;
-}
 
-.slide {
-    min-width: 100%;
-    height: 100%;
-}
 
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #000; /* opcional */
 }
 
+
 /* Animación del slider */
+.slider {
+    display: flex;
+    width: calc(100% * 36); /* 36 imágenes */
+    height: 100%;
+    animation: slide 120s linear infinite;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+
 @keyframes slide {
-    0%   { transform: translateX(0%); }
-    16.66%  { transform: translateX(-100%); }
-    33.33%  { transform: translateX(-200%); }
-    50%  { transform: translateX(-300%); }
-    66.66%  { transform: translateX(-400%); }
-    83.33%  { transform: translateX(-500%); }
-    100% { transform: translateX(0%); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 /* Texto encima */
